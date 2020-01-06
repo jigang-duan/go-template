@@ -1,0 +1,23 @@
+{
+    "go.gopath": "${workspaceRoot}/go",
+    "go.toolsGopath": "${workspaceRoot}/go",
+    "go.lintTool": "gometalinter",
+    "go.buildOnSave": "workspace",
+    "go.lintOnSave": "package",
+    "go.vetOnSave": "package",
+    "go.buildTags": "",
+    "go.buildFlags": [],
+    "go.lintFlags": [],
+    "go.vetFlags": [],
+    "go.coverOnSave": false,
+    "go.useCodeSnippetsOnFunctionSuggest": false,
+    "go.formatOnSave": true,
+    "go.formatTool": "goreturns",
+    "go.goroot": "/usr/local/Cellar/go/1.13.5/libexec",
+    "go.gocodeAutoBuild": false,
+    "[proto3]": {
+        
+    },
+    "editor.detectIndentation": false,
+    "editor.minimap.enabled": false
+}

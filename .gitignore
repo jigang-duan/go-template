@@ -1,0 +1,6 @@
+go/
+
+__debug_bin
+.DS_Store
+
+go.sum
