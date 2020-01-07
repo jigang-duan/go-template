@@ -39,10 +39,13 @@ func New(appName, appOwner string, cfgs ...Configurator) *Bootstrapper {
 
 // SetupViews 加载视图模版
 func (b *Bootstrapper) SetupViews(viewsDir string) {
-	b.RegisterView(
-		iris.HTML(viewsDir, ".html").
-			Layout("shared/layout.html"),
-	)
+	// b.RegisterView(
+	// 	iris.HTML(viewsDir, ".html").
+	// 		Layout("shared/layout.html"),
+	// )
+	tmpl := iris.Pug(viewsDir, ".pug")
+	tmpl.Reload(true)
+	b.RegisterView(tmpl)
 }
 
 func (b *Bootstrapper) SetupSessions(expires time.Duration, cookieHashKey, cookieBlockKey []byte) {

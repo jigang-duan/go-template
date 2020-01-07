@@ -1,0 +1,100 @@
+extends views/home/layout.pug
+
+block title
+  title= .pageTitle
+
+append stylesheet
+  include views/home/style.css.pug
+
+append scripts
+  include views/home/ready.js.pug
+
+block content
+  div.ui.large.top.fixed.hidden.menu
+    div.ui.container
+      a.active.item 首页
+      div.right.menu
+        div.item
+          a.ui.button 登录
+        div.item
+          a.ui.primary.button 注册
+   
+  div.ui.vertical.inverted.sidebar.menu
+    a.active.item 首页
+    a.item 登录
+    a.item 注册
+
+  div.pusher
+    div.ui.inverted.vertical.masthead.center.aligned.segment
+      div.ui.container
+        div.ui.large.secondary.inverted.pointing.menu
+          a.toc.item
+            i.sidebar.icon
+          a.active.item 首页
+          div.right.item
+            a.ui.inverted.button 登录
+            a.ui.inverted.button 注册
+     
+      div.ui.text.container
+        h1.ui.inverted.header Kitchen - 快去做饭吧！
+        h2 Kitchen有各种的厨具，让你作出美味的佳肴!!!
+        div.ui.huge.primary.button 开始吧
+          i.right.arrow.icon
+    
+    div.ui.vertical.stripe.segment
+      div.ui.middle.aligned.stackable.grid.container
+        div.row
+          div.eight.wide.column
+            h3.ui.header 帮助您们快速的开发
+            p 我们可以给你的公司超能力去做他们认为不可能的事情。让我们为您的客户带来欢乐，满足您的需求……通过开源工具集
+            h3.ui.header 我们做最佳的实践
+            p 能够提供工程化的项目实践
+          div.six.wide.right.floated.column
+            img(src="/public/assets/images/wireframe/white-image.png").ui.large.bordered.rounded.image
+        div.row
+          div.center.aligned.column
+            a.ui.huge.button 了解他们的情况
+
+    div.ui.vertical.stripe.quote.segment
+      div.ui.equal.width.stackable.internally.celled.grid
+        div.center.aligned.row
+          div.column
+            h3 什么是最佳实践
+            p 最佳实践是一种：因其产生的结果优于其它选择下的结果，或其已经成为一种做事的标准，从而被普遍认可优于任何替代方案的方法或技术
+          div.column  
+            h3 如何找到你的最佳实践
+            p 
+              img(src="/public/assets/images/avatar/nan.jpg", alt="").ui.avatar.image
+              b 轮子 
+              | 寻找最合适的第三方框架  
+    
+    div.ui.vertical.stripe.segment
+      div.ui.text.container
+        h3.ui.header 打破常规，吸引你的注意力
+        p 我们已经学会了如何通过提供大量的库和通用方法来掌握无所事事的艺术，让你专注于内容的创建和努力工作。
+        a.ui.large.button 了解更多
+        h4.ui.horizontal.header.divider
+          a(href="#") 案例研究
+        h3.ui.header 我们告诉你烹饪的方法了吗?
+        p 是的，我知道你可能忽视了早期的吹嘘是不合逻辑的填充内容，但这是真的。经过多年的基因拼接和DNA组合研究，我们的香蕉确实可以跳舞。
+        a.ui.large.button 我还是很感兴趣
+
+    div.ui.inverted.vertical.footer.segment
+      div.ui.container
+        div.ui.stackable.inverted.divided.equal.height.stackable.grid
+          div.three.wide.column
+            h4.ui.inverted.header 关于
+            div.ui.inverted.link.list
+              a(href="#").item 网站地图
+              a(href="#").item 联系我们
+              a(href="#").item 仪式
+              a(href="#").item 露台计划
+          div.three.wide.column
+            h4.ui.inverted.link.list
+              a(href="#").item 预购
+              a(href="#").item 常见问题解答
+              a(href="#").item 如何访问
+              a(href="#").item 最喜欢的
+          div.seven.wide.column
+            h4.ui.inverted.header 页脚页眉
+            p 在页脚中为动作调用提供额外的空间，这有助于重新吸引用户。
