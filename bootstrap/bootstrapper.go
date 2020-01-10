@@ -6,6 +6,8 @@ import (
 	"github.com/kataras/iris/v12/middleware/recover"
 	"github.com/kataras/iris/v12/sessions"
 
+	"github.com/betacraft/yaag/irisyaag"
+	"github.com/betacraft/yaag/yaag"
 	"github.com/gorilla/securecookie"
 
 	"time"
@@ -56,6 +58,16 @@ func (b *Bootstrapper) SetupSessions(expires time.Duration, cookieHashKey, cooki
 	})
 }
 
+func (b *Bootstrapper) SetupApiDoc() {
+	yaag.Init(&yaag.Config{
+		On:       true,
+		DocTitle: b.AppName,
+		DocPath:  "public/apidoc.html",
+		BaseUrls: map[string]string{"Production": "", "Staging": ""},
+	})
+	b.Use(irisyaag.New())
+}
+
 const (
 	// StaticAssets 是images、css、js等公共资源的根目录.
 	StaticAssets = "./public/"
@@ -78,6 +90,7 @@ func (b *Bootstrapper) Bootstrap() *Bootstrapper {
 		[]byte("lot-secret-of-characters-big-too"),
 	)
 	// b.SetupErrorHandlers()
+	b.SetupApiDoc()
 
 	// static 文件
 	b.Favicon(StaticAssets + Favicon)
