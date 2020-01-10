@@ -13,4 +13,6 @@ require (
 	github.com/smartystreets/goconvey v1.6.4 // indirect
 	github.com/valyala/fasthttp v1.7.1 // indirect
 	github.com/yudai/pp v2.0.1+incompatible // indirect
+	github.com/zserge/lorca v0.1.8
+	github.com/zserge/webview v0.0.0-20200110090726-f78d5821f03c
 )
