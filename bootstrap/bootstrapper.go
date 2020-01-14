@@ -103,6 +103,6 @@ func (b *Bootstrapper) Bootstrap() *Bootstrapper {
 	return b
 }
 
-func (b *Bootstrapper) Listen(addr string, cfgs ...iris.Configurator) {
-	b.Run(iris.Addr(addr), cfgs...)
+func (b *Bootstrapper) Listen(addr string, cfgs ...iris.Configurator) error {
+	return b.Run(iris.Addr(addr), cfgs...)
 }
